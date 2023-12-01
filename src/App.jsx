@@ -1,7 +1,6 @@
-import './App.css'
+/* import './App.css' */
 import { NotRegistered } from './components/NotRegistered'
 import { Registered } from './components/Registered'
-import { SendMessage } from './components/SendMessage'
 import { useMessages } from './hooks/useMessages'
 
 function App() {
@@ -14,20 +13,17 @@ if(messages.length < 1){
   return <span>obteniendo datos...</span>
 }
   return ( 
-        <div>
+        <div className='border border-success min-vh-100 container'>
               {
                 user ?    
                 <div>
                     <Registered user={user} logOut={logOut} messages={messages} 
                       useUid={useUid} handleEditMode={handleEditMode} 
-                      handleDeleteMessage={handleDeleteMessage}/>
-                
-                    <SendMessage  editMode = {editMode} 
-                      setEditMode= {setEditMode}
+                      handleDeleteMessage={handleDeleteMessage}
+                      editMode={editMode}
+                      setEditMode={setEditMode} info={info} setInfo={setInfo}
                       handleChangeFields={handleChangeFields}
-                      info={info}
-                      setInfo={setInfo}
-                    />
+                      />
                 </div>
                 : <NotRegistered login={login}/>
               }

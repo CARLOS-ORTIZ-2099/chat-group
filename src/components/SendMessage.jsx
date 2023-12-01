@@ -30,14 +30,19 @@ const sendData = async (e) => {
 }
 
   return (
-    <div>
-        <form onSubmit={sendData}>
-            <textarea onChange={handleChangeFields} value={info}   placeholder="write message" />
-            <button type="submit">
-              {
-                editMode.edit ? 'editar': 'send'
-              }
-            </button>
+    <div className="p-3  text-center">
+        <form className="row  d-flex justify-content-center  align-items-center" onSubmit={sendData}>
+            <div className="col-9">
+               <textarea className="form-control" onChange={handleChangeFields} value={info}   placeholder="write message" />
+            </div>
+            <div className="col-3"> 
+              <button className={`${editMode.edit ? 'btn btn-secondary':'btn btn-primary'} my-3`} type="submit">
+                {
+                  editMode.edit ? 'editar': 'send'
+                }
+              </button>
+            </div>
+            
         </form>
     </div>
   )

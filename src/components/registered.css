@@ -1,0 +1,75 @@
+
+.message {
+    text-align: left;
+    margin-bottom: 10px;
+    display: flex;
+  }
+  .message .text-message {
+    background-color: #1A233B;
+    display: inline-block;
+    border-radius: 12px;
+    padding: 0 14px;
+  }
+  .message > div {
+    display: inline-block;
+    order: 1;
+  }
+  .message img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    vertical-align: top;
+    margin-right: 10px;
+    object-fit: cover;
+    order: 0;
+  }
+  .message p.text{
+    color: #fff;
+    line-height: 15px;
+  }
+  .message p.user {
+    font-size: 14px;
+    margin-top: 3px;
+  }
+  
+  .my-message {
+    text-align: right;
+    margin-bottom: 10px;
+   /*  background-color: red; */
+  }
+  
+  .my-message .text-message {
+    background-color: rgb(183, 243, 217);
+    display: inline-block;
+    border-radius: 12px;
+    padding: 0 14px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    
+  }
+  .my-message > div {
+    display: inline-block;
+   /*  background-color: blue; */
+  }
+  .my-message img {
+    width: 45px;
+    border-radius: 50%;
+    vertical-align: top;
+    margin-left: 10px;
+  }
+  .my-message p.text{
+    color: #1A233B;
+    line-height: 15px;
+  }
+  .my-message p.user {
+    font-size: 14px;
+    margin-top: 3px;
+  }
+
+[class*= 'bi-']:hover{
+    cursor: pointer;
+    color: #1A233B;
+    transition: .5s ease-in-out;
+}
+
+
+
