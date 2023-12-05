@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { db, auth } from "../firebase/firebase"
+import { db, auth } from "../../firebase/firebase"
 import { addDoc, collection, doc, getDoc, serverTimestamp, updateDoc } from 'firebase/firestore'
 
 export const SendMessage = ({ editMode , setEditMode, handleChangeFields, info, setInfo}) => {

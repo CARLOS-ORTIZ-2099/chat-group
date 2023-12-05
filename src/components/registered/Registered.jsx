@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { SendMessage } from './SendMessage'
+import { SendMessage } from '../send-message/SendMessage'
 import './registered.css'
 
 export const Registered = ({user, messages, useUid, handleEditMode, handleDeleteMessage, logOut, 
@@ -8,9 +8,9 @@ export const Registered = ({user, messages, useUid, handleEditMode, handleDelete
 
 
   return (
-    <div className="row ">
-        <div className="col-12 col-md-4 border border-danger position-rl">
-            <div className="card card-data">
+    <div className="row">
+        <div className="col-12 col-md-4 relative-container mt-5 mb-5">
+            <div className="card card-data main">
                 <div className="card-body text-center">
                   <img className="img-fluid mb-3" src={user?.photoURL} alt="" />
                   <h3 className="text-capitalize">{user.displayName}</h3>

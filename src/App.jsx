@@ -1,6 +1,7 @@
 /* import './App.css' */
-import { NotRegistered } from './components/NotRegistered'
-import { Registered } from './components/Registered'
+import { Charging } from './components/charging/Charging'
+import { NotRegistered } from './components/not-registered/NotRegistered'
+import { Registered } from './components/registered/Registered'
 import { useMessages } from './hooks/useMessages'
 
 function App() {
@@ -10,10 +11,12 @@ const {user, messages, useUid, handleEditMode, handleDeleteMessage,
 
 const handleChangeFields = (e) => setInfo(e.target.value)
 if(messages.length < 1){
-  return <span>obteniendo datos...</span>
+  return <div className="d-flex  align-items-center min-vh-100 ">
+         <Charging/>
+        </div>
 }
   return ( 
-        <div className='border border-success min-vh-100 container'>
+        <div className=' min-vh-100 container'>
               {
                 user ?    
                 <div>
